@@ -237,6 +237,9 @@ if ( ! function_exists( 'malen_vet_setup' ) ) :
         
         // картинки в статьях
         add_image_size( 'articles-thumb', 345, 345, true );
+
+        // картинки на странице одной статьи в выде других статей
+        add_image_size( 'article-thumb', 270, 270, true );
 	}
 endif;
 add_action( 'after_setup_theme', 'malen_vet_setup' );
