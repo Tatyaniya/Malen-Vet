@@ -233,7 +233,10 @@ if ( ! function_exists( 'malen_vet_setup' ) ) :
 			'width'       => 250,
 			'flex-width'  => true,
 			'flex-height' => true,
-		) );
+        ) );
+        
+        // картинки в статьях
+        add_image_size( 'articles-thumb', 345, 345, true );
 	}
 endif;
 add_action( 'after_setup_theme', 'malen_vet_setup' );
@@ -350,6 +353,29 @@ add_action( 'wp_enqueue_scripts', 'malen_vet_scripts' );
  * @see get_post_type_labels() for label keys.
  */
 function malenvet_register_custom_post_type() {
+
+    register_post_type( 'articles', array(
+        'labels'             => array(
+            'name'                  => 'Статьи',
+            'singular_name'         => 'Статьи',
+            'menu_name'             => 'Статьи',
+            'add_new'               => 'Добавить новую статью',
+            'all_items'             => 'Все статьи',
+            'not_found'             => 'Записей не найдено',
+        ),
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'articles' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'menu_icon'			 => 'dashicons-format-aside',
+        'supports'           => array( 'title', 'editor','thumbnail' ),
+    ) );
  
     register_post_type( 'personnel', array(
         'labels'             => array(

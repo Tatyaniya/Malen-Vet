@@ -1,3 +1,12 @@
+<?php
+/**
+*  Template name: Страница статьи
+*
+* Template Post Type: post, page, product
+*/
+get_header();
+?>
+
 <ul class="other-goods__list">
 
     <?php $postid = get_the_id();
