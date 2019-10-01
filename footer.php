@@ -18,7 +18,7 @@ global $malenvet_options;
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/upup.png" alt="наверх">
         </a>
     </section>
-    <footer class="footer" id="footer">
+    <footer class="footer" id="footer" style="background: <?php echo $malenvet_options['opt-color-footer']; ?>">
         <div class="container footer__container">
             <div class="footer__row">
                 <a href="<?php echo get_option("siteurl"); ?>" class="logo footer__logo">

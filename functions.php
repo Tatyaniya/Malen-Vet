@@ -240,6 +240,9 @@ if ( ! function_exists( 'malen_vet_setup' ) ) :
 
         // картинки на странице одной статьи в выде других статей
         add_image_size( 'article-thumb', 270, 270, true );
+
+        // фотографии врачей
+        add_image_size( 'personel-thumb', 320, 255, true );
 	}
 endif;
 add_action( 'after_setup_theme', 'malen_vet_setup' );

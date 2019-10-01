@@ -8,7 +8,7 @@
     <div class="container serv__container">
 
         <?php if($malenvet_options['titleshop']) { ?>
-            <h2 class="service__title">
+            <h2 class="service__title" style="color: <?php echo $malenvet_options['opt-color-titles']; ?>">
                 <?php echo $malenvet_options['titleshop']; ?>
             </h2>
         <?php } ?>

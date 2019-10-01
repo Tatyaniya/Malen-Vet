@@ -20,17 +20,17 @@
         <nav class="nav">
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a href="#services" class="nav__link">
+                    <a href="#services" class="nav__link" style="background: <?php echo $malenvet_options['opt-color-links']; ?>">
                         Услуги
                     </a>
                 </li>
                 <li class="nav__item">
-                    <a href="#about" class="nav__link">
+                    <a href="#about" class="nav__link" style="background: <?php echo $malenvet_options['opt-color-links']; ?>">
                         О нас
                     </a>
                 </li>
                 <li class="nav__item">
-                    <a href="#personnel" class="nav__link">
+                    <a href="#personnel" class="nav__link" style="background: <?php echo $malenvet_options['opt-color-links']; ?>">
                         Персонал
                     </a>
                 </li>
@@ -41,7 +41,7 @@
 <section class="services">
     <div class="container services__container">
         <?php if($malenvet_options['titleservice']) { ?>
-            <h2 class="title-2 services__title" id="services">
+            <h2 class="title-2 services__title" id="services" style="color: <?php echo $malenvet_options['opt-color-titles']; ?>">
                 <?php echo $malenvet_options['titleservice']; ?>
             </h2>
         <?php } ?>
@@ -115,7 +115,7 @@
 <section class="about">
     <div class="container about__container">
         <?php if($malenvet_options['titleabout']) { ?>
-            <h2 class="title-2 about__title" id="about">
+            <h2 class="title-2 about__title" id="about" style="color: <?php echo $malenvet_options['opt-color-titles']; ?>">
                 <?php echo $malenvet_options['titleabout']; ?>
             </h2>
         <?php } ?>
@@ -179,91 +179,41 @@
 <section class="personnel">
     <div class="container personnel__container">
         <?php if($malenvet_options['titlepersonnel']) { ?>
-            <h2 class="personnel__title" id="personnel">
+            <h2 class="personnel__title" id="personnel" style="color: <?php echo $malenvet_options['opt-color-titles']; ?>">
                 <?php echo $malenvet_options['titlepersonnel']; ?>
             </h2>
         <?php } ?>
         <ul class="personnel__list">
-            <li class="personnel__item">
-                <div class="personnel__inside">
-                    <div class="personnel__photo">
-                        <img src="img/ff.jpg" alt="Фото">
-                    </div>
-                    <div class="personnel__desc">
-                        <h3 class="personnel__name">
-                            <p>Дяченко</p>
-                            <p>Елена Дмитриевна</p>
-                        </h3>
-                        <div class="personnel__cont">
-                            Главврач<br> Tерапевт, хирург, дерматолог
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="personnel__item">
-                <div class="personnel__inside">
-                    <div class="personnel__photo">
-                        <img src="img/ff.jpg" alt="Фото">
-                    </div>
-                    <div class="personnel__desc">
-                        <h3 class="personnel__name">
-                            <p>Прокопчук</p>
-                            <p>Марина Анатольевна</p>
-                        </h3>
-                        <div class="personnel__cont">
-                            Терапевт, хирург, нефролог
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="personnel__item">
-                <div class="personnel__inside">
-                    <div class="personnel__photo">
-                        <img src="img/ff.jpg" alt="Фото">
-                    </div>
-                    <div class="personnel__desc">
-                        <h3 class="personnel__name">
-                            <p>Сак</p>
-                            <p>Виктория Дмитриевна</p>
-                        </h3>
-                        <div class="personnel__cont">
-                            Терапевт, грумер
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="personnel__item">
-                <div class="personnel__inside">
-                    <div class="personnel__photo">
-                        <img src="img/ff.jpg" alt="Фото">
-                    </div>
-                    <div class="personnel__desc">
-                        <h3 class="personnel__name">
-                            <p>Параска</p>
-                            <p>Александр Александрович</p>
-                        </h3>
-                        <div class="personnel__cont">
-                            Терапевт, хирург, анестезиолог
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="personnel__item">
-                <div class="personnel__inside">
-                    <div class="personnel__photo">
-                        <img src="img/ff.jpg" alt="Фото">
-                    </div>
-                    <div class="personnel__desc">
-                        <h3 class="personnel__name">
-                            <p>Любуцына</p>
-                            <p>Карина Олеговна</p>
-                        </h3>
-                        <div class="personnel__cont">
-                            Ассистентка
-                        </div>
-                    </div>
-                </div>
-            </li>
+
+            <?php $personnel = new WP_Query( array(
+                    'post_type'     => 'personnel',
+                    'posts_per_page'=> -1,
+                    'order'   => 'ASC',
+                ));
+
+                    while ( $personnel->have_posts() ) :  $personnel->the_post(); ?>
+
+                            <li class="personnel__item">
+                                <div class="personnel__inside">
+                                    <div class="personnel__photo">
+                                        <?php echo get_the_post_thumbnail(get_the_ID(), 'personel-thumb'); ?>
+                                    </div>
+                                    <div class="personnel__desc">
+                                        <h3 class="personnel__name">
+                                            <?php the_title(); ?>
+                                        </h3>
+                                        <div class="personnel__cont">
+                                            <?php the_content(); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                    
+                    <?php endwhile; 
+
+                wp_reset_postdata(); 
+            ?>
+            
         </ul>
     </div>
 </section>

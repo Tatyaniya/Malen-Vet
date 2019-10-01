@@ -67,7 +67,7 @@ global $malenvet_options;
                 </div>
             </div>
         </div>
-        <nav class="menu header__menu">
+        <nav class="menu header__menu" style="background: <?php echo $malenvet_options['opt-color-header']; ?>">
             <div class="humburger">
                 <svg class="ham hamRotate ham4" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
                     <path

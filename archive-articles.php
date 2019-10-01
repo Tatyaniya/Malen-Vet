@@ -9,7 +9,7 @@ get_header();
 
 <section class="articles" id="articles">
     <div class="container articles__container">
-        <h2 class="articles__title">
+        <h2 class="articles__title" style="color: <?php echo $malenvet_options['opt-color-titles']; ?>">
             Статьи
         </h2>
         <ul class="articles__list">

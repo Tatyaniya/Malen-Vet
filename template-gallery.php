@@ -9,7 +9,7 @@ get_header();
 
 <section class="gallery" id="gallery">
     <div class="container gallery__container">
-        <h2 class="gallery__title">
+        <h2 class="gallery__title" style="color: <?php echo $malenvet_options['opt-color-titles']; ?>">
             <?php the_title(); ?>
         </h2>
         <ul class="gallery__list">

@@ -9,7 +9,7 @@ get_header();
 
 <section class="contacts" id="contacts">
     <div class="container contacts__container">
-        <h2 class="contacts__title">
+        <h2 class="contacts__title" style="color: <?php echo $malenvet_options['opt-color-titles']; ?>">
             <?php the_title(); ?>
         </h2>
         <div class="contacts__content">

@@ -622,6 +622,42 @@
         )
     ) );
 
+    Redux::setSection( $opt_name, array(
+        'title'      => 'Цвета',
+        'id'         => 'color-Color',
+        'desc'       => 'Здесь можно задать цвета',
+        'fields'     => array(
+            array(
+                'id'       => 'opt-color-header',
+                'type'     => 'color',
+                'title'    => 'Верхенее меню',
+                'default'  => '#1fb0c3',
+                'validate' => 'color',
+            ),
+            array(
+                'id'       => 'opt-color-links',
+                'type'     => 'color',
+                'title'    => 'Кнопочки второго меню',
+                'default'  => '#1fb0c3',
+                'validate' => 'color',
+            ),
+            array(
+                'id'       => 'opt-color-titles',
+                'type'     => 'color',
+                'title'    => 'Заголовки',
+                'default'  => '#1c9bac',
+                'validate' => 'color',
+            ),
+            array(
+                'id'       => 'opt-color-footer',
+                'type'     => 'color',
+                'title'    => 'Подвал',
+                'default'  => '#188998',
+                'validate' => 'color',
+            ),
+        ),
+    ) );
+
 
 
 /*
