@@ -32,7 +32,7 @@ global $malenvet_options;
                     </div>
                 </a>
                 <div class="social">
-                    <a href="#" class="social__link">
+                    <a href="https://www.instagram.com/vetclinik_malenvet/" class="social__link" target="_blank">
                         <div class="social__icon">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/in.png" alt="instagram">
                         </div>
