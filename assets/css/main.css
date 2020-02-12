@@ -592,6 +592,7 @@ img {
 }
 
 .about__img {
+    margin-top: 3px;
     width: 40%;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -998,12 +999,18 @@ img {
 
 .articles-inner__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 80px;
 }
 
 .articles-inner__item {
-    width: 23%;
+    width: 292px;
+    display: flex;
+    justify-content: center;
+}
+
+.articles-inner__link {
+    width: 270px;
 }
 
 .service {
@@ -1147,7 +1154,6 @@ img {
         flex-wrap: wrap;
     }
     .articles-inner__item {
-        width: 48%;
         margin-bottom: 32px;
     }
 }
