@@ -45,4 +45,15 @@ $( function() {
         }, 250);
     });
 
+    new InstagramFeed({
+        'username': 'malenvet_clinik',
+        'container': document.getElementById("instagram-gallery-box"),
+        'display_profile': false,
+        'display_biography': true,
+        'display_gallery': true,
+        'styling': false,
+        'items': 12,
+        'margin': 0
+    });
+
 });

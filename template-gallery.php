@@ -12,48 +12,19 @@ get_header();
         <h2 class="gallery__title" style="color: <?php echo $malenvet_options['opt-color-titles']; ?>">
             <?php the_title(); ?>
         </h2>
-        <ul class="gallery__list">
+        <div id="instagram-gallery-box">
+
+        </div>
+
+
+
+        <!--<ul class="gallery__list">
             <li class="gallery__item">
                 <div class="gallery__img">
                     <img src="img/f1.jpg" alt="фото">
                 </div>
             </li>
-            <li class="gallery__item">
-                <div class="gallery__img">
-                    <img src="img/f2.jpg" alt="фото">
-                </div>
-            </li>
-            <li class="gallery__item">
-                <div class="gallery__img">
-                    <img src="img/f3.jpg" alt="фото">
-                </div>
-            </li>
-            <li class="gallery__item">
-                <div class="gallery__img">
-                    <img src="img/f4.jpg" alt="фото">
-                </div>
-            </li>
-            <li class="gallery__item">
-                <div class="gallery__img">
-                    <img src="img/f5.jpg" alt="фото">
-                </div>
-            </li>
-            <li class="gallery__item">
-                <div class="gallery__img">
-                    <img src="img/f6.jpg" alt="фото">
-                </div>
-            </li>
-            <li class="gallery__item">
-                <div class="gallery__img">
-                    <img src="img/f7.jpg" alt="фото">
-                </div>
-            </li>
-            <li class="gallery__item">
-                <div class="gallery__img">
-                    <img src="img/f8.jpg" alt="фото">
-                </div>
-            </li>
-        </ul>
+        </ul>-->
     </div>
 </section>
 

@@ -242,7 +242,7 @@ if ( ! function_exists( 'malen_vet_setup' ) ) :
         add_image_size( 'article-thumb', 270, 270, true );
 
         // фотографии врачей
-        add_image_size( 'personel-thumb', 320, 320, true );
+        add_image_size( 'personel-thumb', 320, 480, true );
 	}
 endif;
 add_action( 'after_setup_theme', 'malen_vet_setup' );
@@ -343,6 +343,8 @@ function malen_vet_scripts() {
     // Register
     wp_register_script('jquery','http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', array(), '3.3.1', true);
 	wp_enqueue_script( 'jquery');
+
+    wp_enqueue_script( 'malen-vet-instagram-feed', get_template_directory_uri() . '/assets/js/instagram-feed.js', array('jquery'), '20201402', true );
 
 	wp_enqueue_script( 'malen-vet-main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '20190907', true );
 
