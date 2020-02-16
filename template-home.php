@@ -148,11 +148,12 @@
                     <p class="about__text">
                         Для пациентов, нуждающихся в постоянном присмотре ветеринарного врача, функционирует <a href="<?php echo get_option("siteurl"); ?>/hospital/" class="about__link-text">стационар</a>.
                     </p>
-                    <p class="about__text">
-                        Работает <a href="<?php echo get_option("siteurl"); ?>/gruming/" class="about__link-text">груминг</a> кабинет.
-                    </p>
+                   
                     <div class="about__more">
                         <div class="about__read">
+                            <p class="about__text">
+                                Работает <a href="<?php echo get_option("siteurl"); ?>/gruming/" class="about__link-text">груминг</a> кабинет.
+                            </p>
                             <p class="about__text">
                                 Мы ценим ваш комфорт и время. Поэтому у нас есть <a href="<?php echo get_option("siteurl"); ?>/contacts/" class="about__link-text">предварительная запись</a>. Это позволяет клиентам заранее планировать свой график и не тратить время на ожидание в очереди.
                             </p>

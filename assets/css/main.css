@@ -601,7 +601,7 @@ img {
 
 .about__img {
     margin-top: 3px;
-    width: 40%;
+    width: 49%;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -611,12 +611,12 @@ img {
 }
 
 .about__desc {
-    width: 57.3%;
+    width: 49%;
 }
 
 .about__text {
     line-height: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 .about__more {
